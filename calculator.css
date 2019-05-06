@@ -10,9 +10,18 @@
     grid-gap: 1em 1em;
 }
 
+.button{
+    background-color: lightcyan;
+    text-align: center;
+    padding-top: 0.8em;
+}
+
 #invoerveld {
     grid-column: 1 / 4;
     grid-row: 1 / 2;
+    border: 1px solid black;
+    text-align: right;
+    padding: 0.8em 0.2em 0 0;
 }
 
 #butCorrection {
