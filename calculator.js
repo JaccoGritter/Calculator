@@ -13,50 +13,16 @@ $(document).ready(function(){
         updateInvoerveld();
     });
 
-    $("#but1").click(function(){
-        value1 += "1";
-        updateInvoerveld();
-    });
+    function handleElement(i) {
+        $("#but"+i).click(function(){
+            value1 += i;
+            updateInvoerveld();
+            });
+    }
 
-    $("#but2").click(function(){
-        value1 += "2";
-        updateInvoerveld();
-    });
-
-    $("#but3").click(function(){
-        value1 += "3";
-        updateInvoerveld();
-    });
-
-    $("#but4").click(function(){
-        value1 += "4";
-        updateInvoerveld();
-    });
-
-    $("#but5").click(function(){
-        value1 += "5";
-        updateInvoerveld();
-    });
-
-    $("#but6").click(function(){
-        value1 += "6";
-        updateInvoerveld();
-    });
-
-    $("#but7").click(function(){
-        value1 += "7";
-        updateInvoerveld();
-    });
-
-    $("#but8").click(function(){
-        value1 += "8";
-        updateInvoerveld();
-    });
-
-    $("#but9").click(function(){
-        value1 += "9";
-        updateInvoerveld();
-    });
+    for (var i=1; i<10; i++) {
+        handleElement(i);
+    }
 
     $("#butPeriod").click(function(){
         if(value1.includes(".")) return;
@@ -135,10 +101,6 @@ $(document).ready(function(){
             }
         $("#invoerveld").html(value1);
         
-    }
-
-    function checkIfActive() {
-        if (!$("#this").hasClass("active")) $("#this").addClass("active");
     }
 
 });
