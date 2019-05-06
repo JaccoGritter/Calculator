@@ -29,11 +29,10 @@ Clicking '=' or one of the calculation buttons will show a result in the output 
 
 result value = value one - so further calculations can be made <i>done</i>
 
-Still to do:
-visualize which operator button has been clicked
-make a 'clear all' button 
-set a maximum length for the numbers in the display
-more styling
+visualize which operator button has been clicked <i>done</i>
+make a 'clear all' button <i>done<i>
+set a maximum length for the numbers in the display <i>done</i>
+more styling <i>done</i>
 
 
 
