@@ -11,9 +11,18 @@
 }
 
 .button{
-    background-color: lightcyan;
+    background-color: rgb(173, 224, 224);
     text-align: center;
     padding-top: 0.8em;
+}
+
+.operator{
+    background-color: rgb(27, 173, 173);
+}
+
+.active{
+    background-color: orange; 
+    /* //rgb(13, 121, 121); */
 }
 
 #invoerveld {

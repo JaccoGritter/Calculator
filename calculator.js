@@ -4,7 +4,6 @@ $(document).ready(function(){
 
     var value1 = "";
     var value2 = "";
-    var calculation = "";
     var operator = "";
     var result = 0.0;
 
@@ -74,31 +73,35 @@ $(document).ready(function(){
     });
 
     $("#butDivide").click(function(){
+        if (!$("#butDivide").hasClass("active")) $("#butDivide").addClass("active");
         value2 = value1;
         value1 = "";
         operator = "/";
     });
 
     $("#butSubtract").click(function(){
+        if (!$("#butSubtract").hasClass("active")) $("#butSubtract").addClass("active");
         value2 = value1;
         value1 = "";
         operator = "-";
     });
 
     $("#butAdd").click(function(){
+        if (!$("#butAdd").hasClass("active")) $("#butAdd").addClass("active");
         value2 = value1;
         value1 = "";
         operator = "+";
     });
 
     $("#butMultiply").click(function(){
+        if (!$("#butMultiply").hasClass("active")) $("#butMultiply").addClass("active");
         value2 = value1;
         value1 = "";
         operator = "*";
     });
 
     $("#butResult").click(function(){
-        if (value2 == "0") return;
+        if (value2 == "") return;
         var n1=parseFloat(value1);
         var n2=parseFloat(value2);
         switch (operator) {
@@ -116,6 +119,7 @@ $(document).ready(function(){
               break;
         }
 
+        //result = result.toFixed(10);
         value1 = result.toString();
         value2 = "";
         updateInvoerveld();
@@ -123,15 +127,18 @@ $(document).ready(function(){
 
 
     function updateInvoerveld(){
+        $(".operator").removeClass("active");
         if (value1 == "0") {
             value1 = "";
             $("#invoerveld").html("0");
             return;
             }
         $("#invoerveld").html(value1);
-        console.log(calculation);
         
     }
 
+    function checkIfActive() {
+        if (!$("#this").hasClass("active")) $("#this").addClass("active");
+    }
 
 });
