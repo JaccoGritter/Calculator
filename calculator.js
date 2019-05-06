@@ -9,6 +9,7 @@ $(document).ready(function(){
 
     $("#but0").click(function(){
         if (value1.length==0) return;
+        if (value1.length > 12) return;
         value1 += "0";
         updateInvoerveld();
     });
