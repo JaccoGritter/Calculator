@@ -1,12 +1,16 @@
 /* calculator css */
 
+body {
+    background-color: lightyellow;
+    font-weight: bold;
+}
 
 #calculator {
     width: 12em;
     margin: 10% auto;
     display: grid;
     grid-template-columns: repeat(4, 3em); 
-    grid-template-rows: repeat(5, 3em);
+    grid-template-rows: repeat(6, 3em);
     grid-gap: 1em 1em;
 }
 
@@ -22,10 +26,11 @@
 
 .active{
     background-color: orange; 
-    /* //rgb(13, 121, 121); */
 }
 
 #invoerveld {
+    font-family: monospace;
+    font-size: 1.3em;
     grid-column: 1 / 4;
     grid-row: 1 / 2;
     border: 1px solid black;
@@ -120,4 +125,9 @@
 #butSubtract {
     grid-column: 4 / 5;
     grid-row: 5 / 6;
+}
+
+#clearAll {
+    grid-column: 1 / 5;
+    grid-row: 6 / 7;
 }
