@@ -13,8 +13,10 @@ $(document).ready(function(){
         updateInvoerveld();
     });
 
+    // functionality for buttons 1-9
     function handleElement(i) {
         $("#but"+i).click(function(){
+            if (value1.length > 12) return;
             value1 += i;
             updateInvoerveld();
             });
@@ -39,30 +41,42 @@ $(document).ready(function(){
     });
 
     $("#butDivide").click(function(){
+        $(".operator").removeClass("active");
         if (!$("#butDivide").hasClass("active")) $("#butDivide").addClass("active");
-        value2 = value1;
-        value1 = "";
+        if (value1!="") {
+            value2 = value1;
+            value1 = "";
+        }
         operator = "/";
     });
 
     $("#butSubtract").click(function(){
+        $(".operator").removeClass("active");
         if (!$("#butSubtract").hasClass("active")) $("#butSubtract").addClass("active");
-        value2 = value1;
-        value1 = "";
+        if (value1!="") {
+            value2 = value1;
+            value1 = "";
+        }
         operator = "-";
     });
 
     $("#butAdd").click(function(){
+        $(".operator").removeClass("active");
         if (!$("#butAdd").hasClass("active")) $("#butAdd").addClass("active");
-        value2 = value1;
-        value1 = "";
+        if (value1!="") {
+            value2 = value1;
+            value1 = "";
+        }
         operator = "+";
     });
 
     $("#butMultiply").click(function(){
+        $(".operator").removeClass("active");
         if (!$("#butMultiply").hasClass("active")) $("#butMultiply").addClass("active");
-        value2 = value1;
-        value1 = "";
+        if (value1!="") {
+            value2 = value1;
+            value1 = "";
+        }
         operator = "*";
     });
 
@@ -85,12 +99,19 @@ $(document).ready(function(){
               break;
         }
 
-        //result = result.toFixed(10);
         value1 = result.toString();
         value2 = "";
+        if (value1 == "NaN") value1 = "error";
         updateInvoerveld();
     });
 
+    $("#clearAll").click(function(){
+        value1 = "0";
+        value2 = "";
+        operator = "";
+        result = 0.0;
+        updateInvoerveld();
+    });
 
     function updateInvoerveld(){
         $(".operator").removeClass("active");
