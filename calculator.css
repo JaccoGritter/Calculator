@@ -5,9 +5,25 @@ body {
     font-weight: bold;
 }
 
+#hardware {
+    width: 20em;
+    border-radius: 10px;
+    margin: 10% auto;
+    background-color: rgb(219, 219, 61);
+    padding: 0 1.7em 1em 0;
+    text-align: center;
+    box-shadow: 0.5em 0.5em grey;
+}
+
+#hardware p {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1.5em;
+    color: purple;
+}
+
 #calculator {
     width: 12em;
-    margin: 10% auto;
+    margin: auto;
     display: grid;
     grid-template-columns: repeat(4, 3em); 
     grid-template-rows: repeat(6, 3em);
