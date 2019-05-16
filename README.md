@@ -1,12 +1,14 @@
 Calculator - README
 
+checkout how it works at: https://jaccogritter.github.io/Calculator/
+
 This will be a basic calculator with divide/multiply/subtract/add functions.
 
 First the calculator layout will be built in html/css.
 
 
 ***********************
-  |input/output field| 
+  input/output field
 
   7    8    9    backsp
                  / 
